@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
+use App\Models\ClassModel;
+use App\Models\Participant;
 
 class User extends Authenticatable
 {
@@ -50,6 +52,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function ClassModel(){
+        return $this->hasMany(ClassModel::class, 'teacher_id', 'id');
+    }
 
     public function findForPassport($value){
         if($this->where('identity_number', $value)->count() > 0){

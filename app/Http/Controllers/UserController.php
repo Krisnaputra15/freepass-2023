@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ClassModel;
 use Illuminate\Http\Request;
-use App\Http\Resources\ClassResource;
-use App\Http\Resources\ClassCollection;
 
-class ClassController extends BaseController
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +13,7 @@ class ClassController extends BaseController
      */
     public function index()
     {
-        
+        //
     }
 
     /**
@@ -43,10 +40,10 @@ class ClassController extends BaseController
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Class  $class
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
         //
     }
@@ -54,10 +51,10 @@ class ClassController extends BaseController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Class  $class
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($id)
     {
         //
     }
@@ -66,10 +63,10 @@ class ClassController extends BaseController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Class  $class
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request )
+    public function update(Request $request, $id)
     {
         //
     }
@@ -77,10 +74,10 @@ class ClassController extends BaseController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Class  $class
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy()
+    public function destroy($id)
     {
         //
     }

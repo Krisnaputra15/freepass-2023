@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ClassModel;
+use App\Models\Schedule;
 use Illuminate\Http\Request;
-use App\Http\Resources\ClassResource;
-use App\Http\Resources\ClassCollection;
 
-class ClassController extends BaseController
+class ScheduleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +14,7 @@ class ClassController extends BaseController
      */
     public function index()
     {
-        
+        //
     }
 
     /**
@@ -43,10 +41,10 @@ class ClassController extends BaseController
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Class  $class
+     * @param  \App\Models\Schedule  $schedule
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show(Schedule $schedule)
     {
         //
     }
@@ -54,10 +52,10 @@ class ClassController extends BaseController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Class  $class
+     * @param  \App\Models\Schedule  $schedule
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit(Schedule $schedule)
     {
         //
     }
@@ -66,10 +64,10 @@ class ClassController extends BaseController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Class  $class
+     * @param  \App\Models\Schedule  $schedule
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request )
+    public function update(Request $request, Schedule $schedule)
     {
         //
     }
@@ -77,10 +75,10 @@ class ClassController extends BaseController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Class  $class
+     * @param  \App\Models\Schedule  $schedule
      * @return \Illuminate\Http\Response
      */
-    public function destroy()
+    public function destroy(Schedule $schedule)
     {
         //
     }

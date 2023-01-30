@@ -16,6 +16,11 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
+        if(auth()->user()->role != 1){
+            return response()->json([
+                'error' => "Only admin can access this page"
+            ]);
+        }
         return $next($request);
     }
 }
